@@ -17,19 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-xK-pg8">
-                                <rect key="frame" x="110" y="20" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95039657529999999" green="0.30856233750000001" blue="0.31024401979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZn-yL-Bgo">
-                                <rect key="frame" x="110" y="140" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-uV-zl1">
-                                <rect key="frame" x="100" y="430.5" width="120" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qns-VS-NBf">
+                                <rect key="frame" x="110" y="40" width="100" height="340"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-xK-pg8">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" red="0.95039657529999999" green="0.30856233750000001" blue="0.31024401979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hGb-xK-pg8" secondAttribute="height" multiplier="1:1" id="wJE-Zx-hI3"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZn-yL-Bgo">
+                                        <rect key="frame" x="0.0" y="120" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JP6-Ii-v6Q">
+                                        <rect key="frame" x="0.0" y="240" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-uV-zl1">
+                                <rect key="frame" x="101.5" y="430.5" width="117" height="48"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
@@ -41,14 +50,17 @@
                                     <action selector="changeColorButtonDidTupped" destination="BYZ-38-t0r" eventType="touchUpInside" id="oIT-pX-xpA"/>
                                 </connections>
                             </button>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JP6-Ii-v6Q">
-                                <rect key="frame" x="110" y="260" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qns-VS-NBf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.598592" id="5fh-f9-rv1"/>
+                            <constraint firstItem="zRF-uV-zl1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Zx-yc-mYI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zRF-uV-zl1" secondAttribute="bottom" constant="89.5" id="HIC-0t-W6w"/>
+                            <constraint firstItem="Qns-VS-NBf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WlY-Vc-nEp"/>
+                            <constraint firstItem="zRF-uV-zl1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.365625" id="aSv-3b-gvB"/>
+                            <constraint firstItem="Qns-VS-NBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hEv-oz-Rnz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="changeColorButton" destination="zRF-uV-zl1" id="jaZ-ZW-7ZU"/>
