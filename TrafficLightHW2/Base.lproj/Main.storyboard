@@ -63,9 +63,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="changeColorButton" destination="zRF-uV-zl1" id="jaZ-ZW-7ZU"/>
                         <outlet property="greenColorView" destination="JP6-Ii-v6Q" id="8Kg-Xq-Byw"/>
                         <outlet property="redColorView" destination="hGb-xK-pg8" id="2tu-qU-zxA"/>
+                        <outlet property="startButton" destination="zRF-uV-zl1" id="K5F-O5-biO"/>
                         <outlet property="yellowColorView" destination="KZn-yL-Bgo" id="5px-E2-vDA"/>
                     </connections>
                 </viewController>
